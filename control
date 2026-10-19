@@ -1,0 +1,9 @@
+Package: com.fabian.mlfix
+Name: MLFix
+Version: 0.1.0
+Architecture: iphoneos-arm
+Description: Polyfills + diagnostico para que Mercado Libre/captcha funcione en iOS 12
+Maintainer: Fabian
+Author: Fabian
+Section: Tweaks
+Depends: mobilesubstrate
