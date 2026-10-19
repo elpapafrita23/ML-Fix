@@ -1,0 +1,23 @@
+name: Build MLFix
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Theos
+        uses: Randomblock1/theos-action@v1
+
+      - name: Compilar .deb
+        run: make package FINALPACKAGE=1
+
+      - name: Subir .deb
+        uses: actions/upload-artifact@v4
+        with:
+          name: MLFix-deb
+          path: packages/*.deb
